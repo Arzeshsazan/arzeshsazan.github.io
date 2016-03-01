@@ -7,12 +7,38 @@
     line-height: 21px;
   }
   .social-links{padding-top: 15px;}
+
+  .carousel-caption h1 {
+	font-size: 17px;
+}
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   #hero-area .btn{margin-top: 15px;}
-  .navbar-default{background: rgba(0, 0, 0, 0.8);}
   .social-links{padding-top: 15px;}
   .row {padding: 40px 0px;}
 
+  .carousel-caption h1 {
+	font-size: 15px;
+	}
+}
+
+@media (min-width: 1024px) {
+  .navbar-nav>li>a,
+  .navbar-brand {
+    line-height: 60px;
+  }
+  .navbar-brand {
+    height: 90px;
+  }
+
+  .affix .navbar-nav>li>a,
+  .affix .navbar-brand {
+    line-height: 20px;
+  }
+  .affix .navbar-brand {
+    height: 50px;
+    font-size: 20px;
+  }
+  body { padding-top: 95px; }
 }
