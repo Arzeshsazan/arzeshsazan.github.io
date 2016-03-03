@@ -19,8 +19,15 @@ a {
 a:hover {
   color: #e76c3c;
 }
-.buffer { padding: 40px 0px; }
+.buffer { padding: 25px 0px; }
 .no-buffer {padding: 0px !important;}
+
+h3 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #FD9809;
+  font-weight: 500;
+}
 
 .btn {
   border: none;
@@ -69,7 +76,6 @@ a:hover {
 }
 .blue-bkg .title {
   color: #FD9809;
-  text-shadow: 1px -1px 0 #F6CD3B; 
 }
 .blue-bkg .subtitle {
   color: #eee;
@@ -130,10 +136,6 @@ a:hover {
 
 .navbar-default .navbar-toggle .icon-bar {
   background: #4066C0;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background: #333;
 }
 
 .navbar-default .navbar-brand {
@@ -243,22 +245,46 @@ body { padding-top: 50px; }
           transform: translate3d(0, 0, 0);
 }
 
+#hero-area{
+  background-repeat: no-repeat;
+  background-image: url(../img/hero/mobile-wide.png);
+  background-size: cover; 
+  min-height: 1vh;
+}
+
+
 #hero-area .btn {
   margin-right: 20px;
 }
 #hero-area img {
   max-width: 100%;
 }
-#hero-area p {
-  padding: 50px 0;
+
+#hero-area h1 {
+  color: #fff;
+  background-color: rgba(253, 152, 9, 0.7);
+  padding: 5px 0;
+}
+#hero-area h2 {
+  margin: 20px 10%;
+  padding: 15px;
+  color: #fff;
+  background-color: rgba(246, 205, 59, 0.7);
+}
+#hero-area .hero-summary {
+  color: #fff;
+  margin: 0 20%;
+  margin-top: 10%;
+  padding: 20px 15px;
   line-height: 30px;
   font-size: 17px;
+  background-color: rgba(80, 118, 208, 0.75);
+  color: #eee;
 }
 
-#services h3 {
-  margin-top: 0;
-  font-size: 28px;
-  color: #FD9809;
+.service-item img{
+  max-height: 120px;
+  max-width: 90%;
 }
 /*Portfolio*/
 #portfolio {
@@ -361,6 +387,7 @@ body { padding-top: 50px; }
 }
 #contact .contact-info {
   margin: 40px 0;
+  text-align: right;
 }
 #contact .contact-info p {
   font-size: 20px;
