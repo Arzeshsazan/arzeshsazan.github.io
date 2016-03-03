@@ -247,7 +247,7 @@ body { padding-top: 50px; }
 
 #hero-area{
   background-repeat: no-repeat;
-  background-image: url(../img/hero/mobile-wide.png);
+  background-image: url(../img/hero/mobile-wide.jpg);
   background-size: cover; 
   min-height: 1vh;
 }
