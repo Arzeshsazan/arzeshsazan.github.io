@@ -43,6 +43,15 @@
         <link rel="stylesheet" type="text/css" href="assets/extras/animate.css" />
         <link rel="stylesheet" type="text/css" href="assets/extras/lightbox.css" />
         
+        <!-- jQuery Load -->
+        <script src="assets/js/jquery-min.js"></script>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        
+        <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+         <![endif]-->
+
         <style type='text/css'>
             @font-face {
                 font-family: 'farsi_font';
@@ -53,16 +62,17 @@
             h1, h2, h3, h4, h5, h6, p, div {
                 font-family: 'farsi_font';
             }
+          .no-cssanimations .rw-wrapper .rw-sentence span:first-child{
+            opacity: 1;
+          }
         </style>
-        
-        <!-- jQuery Load -->
-        <script src="assets/js/jquery-min.js"></script>
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        
-        <!--[if lt IE 9]>
-         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-         <![endif]-->
+
+        <!--[if lt IE 9]> 
+          <style>
+            .rw-wrapper{ display: none; } 
+            .rw-sentence-IE{ display: block;  }
+          </style>
+        <![endif]-->
         
     </head>
     
@@ -107,7 +117,13 @@
                 <div class="row buffer">
                     <div class="col-md-12">
                         <h1 class="title">{{ Title }}</h1>
-                        <h2 class="subtitle">{{ SubTitle }}</h2>
+
+                        <h2 class="subtitle rw-sentence rw-wrapper">
+                          {{ moto_before }} <span class="rw-words rw-words-1"><span>{{ moto_1|replace(" ", "&nbsp;")}}</span><span>{{ moto_2|replace(" ", "&nbsp;")}}</span><span>{{ moto_3|replace(" ", "&nbsp;")}}</span><span>{{ moto_4|replace(" ", "&nbsp;")}}</span></span>{{ moto_after|default("", True) }}
+                        </h2>
+
+                        <h2 class="subtitle rw-sentence-IE">{{ moto_before }} {{ moto_1 }} {{ moto_after }}</h2>
+
                         <div class="hero-summary hidden-xs">
                         <p> {{ Summary }}</p>
                     </div>
@@ -121,7 +137,7 @@
                 
         <!-- Service Section -->
         
-        <section class="orange1-bkg" id="services">
+        <section class="white-bkg" id="services">
             <div class="container white-bkg text-center">
                 <div class="row buffer">
                     <h1 class="title">{{ What_we_do }}</h1>
@@ -150,9 +166,6 @@
                             <p>{{ Service_3_summary }}</p>
                         </div>
                     </div>
-                    
-                    
-                    
                 </div>
             </div>
         </section>
@@ -160,7 +173,7 @@
         
         <!-- About Section -->
         
-        <section class="orange2-bkg" id="about">
+        <section class="gray-bkg" id="about">
             <div class="container gray-bkg">
                 <div class="row buffer">
                     <h1 class="title">{{ About_us }}</h1>
@@ -179,7 +192,7 @@
         
         
         <!-- Client Section -->
-        <section class="orange3-bkg" id="clients">
+        <section class="white-bkg" id="clients">
             <div class="container white-bkg text-center">
                 <div class="row buffer">
                     <h1 class="title">{{ Clients }}</h1>
@@ -188,25 +201,21 @@
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="service-item">
                             <img src="assets/img/clients/img1.png" alt="{{ client_1 }}" />
-                            <h3>{{ client_1 }}</h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="service-item">
                             <img src="assets/img/clients/img2.png" alt="{{ client_2 }}" />
-                            <h3>{{ client_2 }}</h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="service-item">
                             <img src="assets/img/clients/img3.png" alt="{{ client_3 }}" />
-                            <h3>{{ client_3 }}</h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="service-item">
                             <img src="assets/img/clients/img4.png" alt="{{ client_4 }}" />
-                            <h3>{{ client_4 }}</h3>
                         </div>
                     </div>
 
@@ -218,7 +227,7 @@
         
         
         <!-- Conatct Section -->
-        <section class="blue-bkg" id="contact">
+        <section class="gray-bkg" id="contact">
             <div class="container gray-bkg text-center">
                 <div class="row buffer">
                     <h1 class="title">{{ Contact_us }}</h1>
@@ -262,10 +271,9 @@
                             <p><i class="fa fa-envelope"></i> {{ email_address }}</p>
                         </div>
                         <div class="social-links hidden-print">
-                            <a class="social" href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-                            <a class="social" href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                            <a class="social" href="https://www.facebook.com/arzeshsazan" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                            <a class="social" href="https://twitter.com/Arzeshsazan" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                         </div>
-                                                
                     </div>
                     
                 </div>

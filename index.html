@@ -43,6 +43,15 @@
         <link rel="stylesheet" type="text/css" href="assets/extras/animate.css" />
         <link rel="stylesheet" type="text/css" href="assets/extras/lightbox.css" />
         
+        <!-- jQuery Load -->
+        <script src="assets/js/jquery-min.js"></script>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        
+        <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+         <![endif]-->
+
         <style type='text/css'>
             @font-face {
                 font-family: 'farsi_font';
@@ -53,16 +62,17 @@
             h1, h2, h3, h4, h5, h6, p, div {
                 font-family: 'farsi_font';
             }
+          .no-cssanimations .rw-wrapper .rw-sentence span:first-child{
+            opacity: 1;
+          }
         </style>
-        
-        <!-- jQuery Load -->
-        <script src="assets/js/jquery-min.js"></script>
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        
-        <!--[if lt IE 9]>
-         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-         <![endif]-->
+
+        <!--[if lt IE 9]> 
+          <style>
+            .rw-wrapper{ display: none; } 
+            .rw-sentence-IE{ display: block;  }
+          </style>
+        <![endif]-->
         
     </head>
     
@@ -107,9 +117,15 @@
                 <div class="row buffer">
                     <div class="col-md-12">
                         <h1 class="title">از فناوری برای گسترش تجارت خود استفاده کنید!</h1>
-                        <h2 class="subtitle">کاهش هزینه و افزایش بهره‌وری، سرعت و کیفیت</h2>
+
+                        <h2 class="subtitle rw-sentence rw-wrapper">
+                          کاهش هزینه‌ها و افزایش <span class="rw-words rw-words-1"><span>بهره‌وری</span><span>سرعت</span><span>کیفیت</span><span>دقت</span></span>
+                        </h2>
+
+                        <h2 class="subtitle rw-sentence-IE">کاهش هزینه‌ها و افزایش بهره‌وری None</h2>
+
                         <div class="hero-summary hidden-xs">
-                        <p> هدف ما، آسان کردن کلیه خدمات مالی، بانکی و بیمه ای برای مشتریانمان با استفاده از فناوری روز دنیا است. در جهانی که فنوری زمینه های مختلف زندگی را تحت تاثیر قرار داده است، به شما کمک میکنید تا خدمات خود را فراتر از انتظار مشتری و یک گام جلوتر از رقبا ارائه دهید.</p>
+                        <p> هدف ما، آسان کردن کلیه خدمات مالی، بانکی و بیمه ای برای مشتریانمان با استفاده از فناوری روز دنیا است. در جهانی که فناوری زمینه های مختلف زندگی را تحت تاثیر قرار داده است، به شما کمک می‌کنیم تا خدمات خود را فراتر از انتظار مشتری و یک گام جلوتر از رقبا ارائه دهید.</p>
                     </div>
                     </div>
                     
@@ -121,7 +137,7 @@
                 
         <!-- Service Section -->
         
-        <section class="orange1-bkg" id="services">
+        <section class="white-bkg" id="services">
             <div class="container white-bkg text-center">
                 <div class="row buffer">
                     <h1 class="title">خدمات ما</h1>
@@ -131,7 +147,7 @@
                         <div class="service-item">
                             <img src="assets/img/services/service_1.png" alt="بانکداری همراه" />
                             <h3>بانکداری همراه</h3>
-                            <p>ما شما را در استفاده از توان تلفن‌های همراه به عنوان همرا همیشگی مشتری‌هایتان برای ارائه خدمات و محصولاتتان یاری میکنیم تا ضمن کاهش هزینه ها بازار مشتری های خود را گسترش دهید</p>
+                            <p>ما شما را در استفاده از توان تلفن‌های همراه به عنوان همراه همیشگی مشتری‌هایتان برای ارائه خدمات و محصولاتتان یاری میکنیم تا ضمن کاهش هزینه ها بازار مشتری های خود را گسترش دهید</p>
                         </div>
                     </div>
                     
@@ -145,14 +161,11 @@
                     
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="service-item">
-                            <img src="assets/img/services/service_3.png" alt="براورد نیاز مشتری" />
-                            <h3>براورد نیاز مشتری</h3>
+                            <img src="assets/img/services/service_3.png" alt="برآورد نیاز مشتری" />
+                            <h3>برآورد نیاز مشتری</h3>
                             <p>ما به شما کمک میکنیم محصولات و خدمات مطابق با نیاز های مدرن مشتری طراحی کنید تا همواره یک گام از رقبا پیش باشید</p>
                         </div>
                     </div>
-                    
-                    
-                    
                 </div>
             </div>
         </section>
@@ -160,7 +173,7 @@
         
         <!-- About Section -->
         
-        <section class="orange2-bkg" id="about">
+        <section class="gray-bkg" id="about">
             <div class="container gray-bkg">
                 <div class="row buffer">
                     <h1 class="title">درباره ما</h1>
@@ -179,34 +192,30 @@
         
         
         <!-- Client Section -->
-        <section class="orange3-bkg" id="clients">
+        <section class="white-bkg" id="clients">
             <div class="container white-bkg text-center">
                 <div class="row buffer">
                     <h1 class="title">همکاران</h1>
-                    <h2 class="subtitle hidden-xs">تیم خبره‌ای از مدیران سابق موسسات معتبر داخلی و خارجی همراه ما در خدمت به شما هستند</h2>
+                    <h2 class="subtitle hidden-xs">گروه ما از مدیران سابق موسسات معتبر همراه شما هستند</h2>
                     
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="service-item">
                             <img src="assets/img/clients/img1.png" alt="بانک صادرات ایران" />
-                            <h3>بانک صادرات ایران</h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="service-item">
                             <img src="assets/img/clients/img2.png" alt="بانک پارسیان" />
-                            <h3>بانک پارسیان</h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="service-item">
                             <img src="assets/img/clients/img3.png" alt="کمیسیون اتحادیه اروپا" />
-                            <h3>کمیسیون اتحادیه اروپا</h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="service-item">
                             <img src="assets/img/clients/img4.png" alt="شرکت نفت ایران" />
-                            <h3>شرکت نفت ایران</h3>
                         </div>
                     </div>
 
@@ -218,7 +227,7 @@
         
         
         <!-- Conatct Section -->
-        <section class="blue-bkg" id="contact">
+        <section class="gray-bkg" id="contact">
             <div class="container gray-bkg text-center">
                 <div class="row buffer">
                     <h1 class="title">تماس با ما</h1>
@@ -262,10 +271,9 @@
                             <p><i class="fa fa-envelope"></i> info@arzeshsazan.ir</p>
                         </div>
                         <div class="social-links hidden-print">
-                            <a class="social" href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-                            <a class="social" href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                            <a class="social" href="https://www.facebook.com/arzeshsazan" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                            <a class="social" href="https://twitter.com/Arzeshsazan" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                         </div>
-                                                
                     </div>
                     
                 </div>
